@@ -2,10 +2,10 @@ import setuptools
     
 setuptools.setup(
     name="oimbot",
-    version="10.6.0",
+    version="10.5.2",
     author="Aeroz",
-    description="Lobby bot.",
-    url="https://www.youtube.com/",
+    description="Lobby_Bot_Ftn",
+    url="https://bot.aerozoff.com",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
@@ -22,7 +22,7 @@ setuptools.setup(
         'aiohttp'
     ],
     dependency_links = [
-        "git+git://github.com/XBXBot/fortnitepy.git"
+        "git+git://github.com/Luc1412/fortnitepy.git"
     ],
     include_package_data=True,
 )
