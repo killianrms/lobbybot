@@ -1,1 +1,7 @@
--e git+https://github.com/Luc1412/fortnitepy.git
+crayons
+BenBotAsync
+fortnitepy @ git+https://github.com/Luc1412/fortnitepy.git
+FortniteAPIAsync
+sanic==21.6.2
+colorama
+aiohttp
