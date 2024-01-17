@@ -4,8 +4,7 @@ setuptools.setup(
     name="oimbot",
     version="10.5.2",
     author="Aeroz",
-    long_description="""For Create Fortnite LobbyBot""",
-)
+    long_description="For Create Fortnite LobbyBot",
     description="Lobby_Bot_Ftn",
     url="https://bot.aerozoff.com",
     packages=setuptools.find_packages(),
