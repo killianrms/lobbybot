@@ -16,6 +16,7 @@ setuptools.setup(
     install_requires=[
         'crayons',
         'BenBotAsync',
+        'fortnitepy',
         'FortniteAPIAsync',
         'sanic==21.6.2',
         'colorama',
