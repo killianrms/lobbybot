@@ -2,7 +2,7 @@ import setuptools
     
 setuptools.setup(
     name="oimbot",
-    version="10.6.0",
+    version="10.5.2",
     author="Aeroz",
     description="Lobby bot.",
     url="https://www.youtube.com/",
