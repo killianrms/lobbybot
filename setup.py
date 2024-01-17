@@ -2,7 +2,7 @@ import setuptools
     
 setuptools.setup(
     name="oimbot",
-    version="10.5.2",
+    version="10.5.3",
     author="Aeroz",
     long_description="For Create Fortnite LobbyBot",
     description="Lobby_Bot_Ftn",
