@@ -4,7 +4,7 @@ setuptools.setup(
     name="oimbot",
     version="10.5.2",
     author="Aeroz",
-    long_description="For Create Fortnite LobbyBot",
+    long_description="A Fortnite LobbyBot creation tool",
     description="Lobby_Bot_Ftn",
     url="https://bot.aerozoff.com",
     packages=setuptools.find_packages(),
@@ -20,10 +20,8 @@ setuptools.setup(
         'FortniteAPIAsync',
         'sanic==21.6.2',
         'colorama',
-        'aiohttp'
-    ],
-    dependency_links = [
-        "git+git://github.com/Luc1412/fortnitepy.git"
+        'aiohttp',
+        'git+https://github.com/Luc1412/fortnitepy.git'
     ],
     include_package_data=True,
 )
