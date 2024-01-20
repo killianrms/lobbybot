@@ -20,7 +20,7 @@ setuptools.setup(
         'sanic==21.6.2',
         'colorama',
         'aiohttp',
-        'https://github.com/PirxcyFinal/fortnitepy.git#egg=fortnitepy'
+        'git+github.com/PirxcyFinal/fortnitepy.git#egg=fortnitepy'
     ],
     include_package_data=True
 )
