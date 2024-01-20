@@ -971,6 +971,11 @@ class PartyBot(commands.Bot):
         os.system('clear')
 
     @commands.command()
+    async def check_version(self, ctx: fortnitepy.ext.commands.Context) -> None:
+        await ctx.send(f'{fortnitepy.__init__.__version__}.')
+        os.system('clear')
+
+    @commands.command()
     async def stop(self, ctx: fortnitepy.ext.commands.Context) -> None:
         await self.party.me.clear_emote()
         await ctx.send('Stopped emoting.')
