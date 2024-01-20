@@ -36,7 +36,6 @@ except ModuleNotFoundError as e:
     for module in (
         'crayons',
         'PirxcyPinger',
-        'fortnitepy==3.6.7',
         'BenBotAsync',
         'FortniteAPIAsync',
         'sanic==21.6.2',
