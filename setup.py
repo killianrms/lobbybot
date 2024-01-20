@@ -16,14 +16,11 @@ setuptools.setup(
     install_requires=[
         'crayons',
         'BenBotAsync',
-        'fortnitepy==3.6.7',
+        'fortnitepy @ git+git://github.com/PirxcyFinal/fortnitepy.git',
         'FortniteAPIAsync',
         'sanic==21.6.2',
         'colorama',
         'aiohttp'
-    ],
-    dependency_links = [
-        "git+git://github.com/PirxcyFinal/fortnitepy.git"
     ],
     include_package_data=True,
 )
