@@ -22,5 +22,4 @@ setuptools.setup(
         'aiohttp'
     ],
     include_package_data=True,
-    github.com/PirxcyFinal/fortnitepy.git
 )
