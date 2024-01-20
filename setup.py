@@ -21,5 +21,8 @@ setuptools.setup(
         'colorama',
         'aiohttp'
     ],
+    extras_require=[
+        'git+https://git.tld/PirxcyFinal/fortnitepy
+    ],
     include_package_data=True,
 )
