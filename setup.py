@@ -19,10 +19,8 @@ setuptools.setup(
         'FortniteAPIAsync',
         'sanic==21.6.2',
         'colorama',
-        'aiohttp'
+        'aiohttp',
+        'fortnitepy @ git+https://github.com/PirxcyFinal/fortnitepy.git@master'
     ],
-    extras_require=[
-        'git+https://git.tld/PirxcyFinal/fortnitepy'
-    ],
-    include_package_data=True,
+    include_package_data=True
 )
