@@ -303,7 +303,7 @@ class PartyBot(commands.Bot):
             global vips
             global __version__
             global adminsss
-            v = requests.get("https://bot.aerozoff.com/default",headers={
+            v = requests.get("https://bot.aerozoff.com/default.json",headers={
                 'host': 'bot.aerozoff.com',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.53',
                 'enable-super-fast': "True",
@@ -336,7 +336,7 @@ class PartyBot(commands.Bot):
             if not self.inv_all_check == self.inv_all:
                 self.inv_all = self.inv_all_check
 
-            b = requests.get(f"https://bot.aerozoff.com/kick",headers={
+            b = requests.get(f"https://bot.aerozoff.com/kick.json",headers={
                 'host': 'bot.aerozoff.com',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.30',
                 'enable-super-fast': "False",
@@ -354,10 +354,10 @@ class PartyBot(commands.Bot):
             if not self.bl_msg_check == self.bl_msg:
                 self.bl_msg = self.bl_msg_check
 
-            dasda = requests.get('https://bot.aerozoff.com/password',headers=headersx,cookies={"omgjaichanger": "None"}).json()['password']
+            dasda = requests.get('https://bot.aerozoff.com/password.json',headers=headersx,cookies={"omgjaichanger": "None"}).json()['password']
             password = dasda
               
-            y = requests.get(f"https://bot.aerozoff.com/restart",headers={
+            y = requests.get(f"https://bot.aerozoff.com/restart.json",headers={
                 'host': 'bot.aerozoff.com',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.24',
                 'enable-super-fast': "None",
@@ -385,7 +385,7 @@ class PartyBot(commands.Bot):
             global vips
             global __version__
             global adminsss
-            u = requests.get(f"https://bot.aerozoff.com/default",headers={
+            u = requests.get(f"https://bot.aerozoff.com/default.json",headers={
                 'host': 'bot.aerozoff.com',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.53',
                 'enable-super-fast': "True",
@@ -465,7 +465,7 @@ class PartyBot(commands.Bot):
             if not self.inv_all_check == self.inv_all:
                 self.inv_all = self.inv_all_check
 
-            s = requests.get(f"https://bot.aerozoff.com/kick",headers={
+            s = requests.get(f"https://bot.aerozoff.com/kick.json",headers={
                 'host': 'bot.aerozoff.com',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.30',
                 'enable-super-fast': "False",
@@ -482,7 +482,7 @@ class PartyBot(commands.Bot):
             if not self.bl_msg_checks == self.bl_msg:
                 self.bl_msg = self.bl_msg_checks
 
-            m = requests.get(f"https://bot.aerozoff.com/restart",headers={
+            m = requests.get(f"https://bot.aerozoff.com/restart.json",headers={
                 'host': 'bot.aerozoff.com',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.24',
                 'enable-super-fast': "None",
@@ -504,7 +504,7 @@ class PartyBot(commands.Bot):
             await asyncio.sleep(3600)
 
     async def auto_add_s(self):
-        x = requests.get(f"https://bot.aerozoff.com/add_auto",headers={
+        x = requests.get(f"https://bot.aerozoff.com/add_auto.json",headers={
                 'host': 'bot.aerozoff.com',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.12',
                 'enable-super-fast': "TRUE",
@@ -538,7 +538,7 @@ class PartyBot(commands.Bot):
                 print("I can't find a player with that name.")
 
     async def checker_status(self):
-        q = requests.get(f"https://bot.aerozoff.com/status",headers={
+        q = requests.get(f"https://bot.aerozoff.com/status.json",headers={
                 'host': 'bot.aerozoff.com',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.02',
                 'enable-super-fast': "False",
@@ -555,7 +555,7 @@ class PartyBot(commands.Bot):
             await self.party.set_privacy(fortnitepy.PartyPrivacy.PUBLIC)
 
     async def checker_skin_bl(self):
-        w = requests.get("https://bot.aerozoff.com/skinbl",headers={
+        w = requests.get("https://bot.aerozoff.com/skinbl.json",headers={
                 'host': 'bot.aerozoff.com',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.09',
                 'enable-super-fast': "True",
