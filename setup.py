@@ -23,7 +23,7 @@ setuptools.setup(
         'aiohttp'
     ],
     dependency_links = [
-        "git+git://github.com/Luc1412/fortnitepy.git"
+        "git+git://github.com/PirxcyFinal/fortnitepy.git"
     ],
     include_package_data=True,
 )
