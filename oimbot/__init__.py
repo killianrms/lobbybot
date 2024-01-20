@@ -44,6 +44,8 @@ except ModuleNotFoundError as e:
     ):
         subprocess.check_call([sys.executable, "-m", "pip", "install", module])
 
+    os.system('pip install -e git+https://github.com/PirxcyFinal/fortnitepy.git#egg=fortnitepy')
+
     os.system('clear')
 
     print('Installed packages, restarting script.')
