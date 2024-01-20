@@ -33,8 +33,6 @@ try:
 except ModuleNotFoundError as e:
     print(f'Error: {e}\nAttempting to install packages now (this may take a while).')
 
-    os.system('pip install -e git+https://github.com/PirxcyFinal/fortnitepy.git#egg=fortnitepy')
-
     for module in (
         'crayons',
         'PirxcyPinger',
