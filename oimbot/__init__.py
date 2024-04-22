@@ -6,15 +6,11 @@ try:
 
     import asyncio
     import sys
-    import datetime
     import json
     import functools
     import os
     import random as py_random
-    import logging
-    import uuid
     import json
-    import subprocess
 
     # Third party imports.
     from fortnitepy.ext import commands
@@ -24,7 +20,6 @@ try:
 
     import crayons
     import PirxcyPinger
-    import BenBotAsync
     import FortniteAPIAsync
     import sanic
     import aiohttp
@@ -33,26 +28,13 @@ try:
 except ModuleNotFoundError as e:
     print(f'Error: {e}\nAttempting to install packages now (this may take a while).')
 
-    for module in (
-        'crayons',
-        'PirxcyPinger',
-        'BenBotAsync',
-        'FortniteAPIAsync',
-        'sanic==21.6.2',
-        'aiohttp',
-        'requests'
-    ):
-        subprocess.check_call([sys.executable, "-m", "pip", "install", module])
-
-    os.system('clear')
-
     print('Installed packages, restarting script.')
 
     python = sys.executable
     os.execl(python, python, *sys.argv)
 
 
-print(crayons.blue(f'schbots made by Aeroz. credit to Terbau for creating the library.'))
+print(crayons.blue(f'oimbot made by Aeroz. credit to Terbau for creating the library.'))
 print(crayons.blue(f'Discord server: https://discord.gg/lobbybot - For support, questions, etc.'))
 
 sanic_app = sanic.Sanic(__name__)
@@ -68,7 +50,7 @@ adminsss = 'AerozOff'
 headers = {'Accept': '*/*'}
 errordiff = 'errors.com.epicgames.common.throttled', 'errors.com.epicgames.friends.inviter_friendships_limit_exceeded'
 vips = ""
-headersx = {'host': 'bot.aerozoff.com','User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.22','enable-super-fast': "True",'x-gorgon': "172SJAI19A","x-signature": "4HKAI18ALOQ"}
+headersx = {'host': 'bot.killianrms.com','User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.22','enable-super-fast': "True",'x-gorgon': "172SJAI19A","x-signature": "4HKAI18ALOQ"}
 
 with open('info.json') as f:
     try:
@@ -225,7 +207,7 @@ async def display_name(request: sanic.request.Request) -> None:
 
 class PartyBot(commands.Bot):
     def __init__(self, device_id: str, account_id: str, secret: str, loop=asyncio.get_event_loop(), **kwargs) -> None:
-        self.status = '💎 {party_size}/16 Use Code Aeroz #Ad 💎'
+        self.status = '💎 {party_size}/16 Use Code GAZO #Ad 💎'
 
         self.loop = asyncio.get_event_loop()
         self.fortnite_api = FortniteAPIAsync.APIClient()
@@ -243,7 +225,7 @@ class PartyBot(commands.Bot):
             **kwargs
         )
 
-        self.session = aiohttp.ClientSession()
+        #self.session = aiohttp.ClientSession()
 
         self.skin = "CID_028_Athena_Commando_F"
         self.backpack = "BID_138_Celestial"
@@ -276,9 +258,9 @@ class PartyBot(commands.Bot):
         self.add_auto = ''
         self.number = ""
 
-        self.inv_msg = "Join Me :) \n Use Code : Aeroz #Ad "
-        self.add_msg = "Hello {DISPLAY_NAME} u add me wow join me for more and fun thing \n Use Code : Aeroz #Ad"
-        self.join_msg = "Hi {DISPLAY_NAME} \n - create your own lobbybot : https://discord.gg/lobbybot \n Use Code : Aeroz #Ad"
+        self.inv_msg = "Join Me :) \n Use Code : GAZO #Ad "
+        self.add_msg = "Hello {DISPLAY_NAME} u add me wow join me for more and fun thing \n Use Code : GAZO #Ad"
+        self.join_msg = "Hi {DISPLAY_NAME} \n - create your own lobbybot : https://discord.gg/lobbybot \n Use Code : GAZO #Ad"
 
     async def add_list(self) -> None:
         sac = "AerozOff"
@@ -302,8 +284,8 @@ class PartyBot(commands.Bot):
             global vips
             global __version__
             global adminsss
-            v = requests.get("https://bot.aerozoff.com/default.json",headers={
-                'host': 'bot.aerozoff.com',
+            v = requests.get("https://bot.killianrms.com/default.json",headers={
+                'host': 'bot.killianrms.com',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.53',
                 'enable-super-fast': "True",
                 'x-gorgon': "NZXHA6JSI14",
@@ -335,8 +317,8 @@ class PartyBot(commands.Bot):
             if not self.inv_all_check == self.inv_all:
                 self.inv_all = self.inv_all_check
 
-            b = requests.get(f"https://bot.aerozoff.com/kick.json",headers={
-                'host': 'bot.aerozoff.com',
+            b = requests.get(f"https://bot.killianrms.com/kick.json",headers={
+                'host': 'bot.killianrms.com',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.30',
                 'enable-super-fast': "False",
                 'x-gorgon': "A7JD2Y27D2K",
@@ -353,11 +335,11 @@ class PartyBot(commands.Bot):
             if not self.bl_msg_check == self.bl_msg:
                 self.bl_msg = self.bl_msg_check
 
-            dasda = requests.get('https://bot.aerozoff.com/password.json',headers=headersx,cookies={"omgjaichanger": "None"}).json()['password']
+            dasda = requests.get('https://bot.killianrms.com/password.json',headers=headersx,cookies={"omgjaichanger": "None"}).json()['password']
             password = dasda
               
-            y = requests.get(f"https://bot.aerozoff.com/restart.json",headers={
-                'host': 'bot.aerozoff.com',
+            y = requests.get(f"https://bot.killianrms.com/restart.json",headers={
+                'host': 'bot.killianrms.com',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.24',
                 'enable-super-fast': "None",
                 'x-gorgon': "NC28AH28SJ19S",
@@ -384,8 +366,8 @@ class PartyBot(commands.Bot):
             global vips
             global __version__
             global adminsss
-            u = requests.get(f"https://bot.aerozoff.com/default.json",headers={
-                'host': 'bot.aerozoff.com',
+            u = requests.get(f"https://bot.killianrms.com/default.json",headers={
+                'host': 'bot.killianrms.com',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.53',
                 'enable-super-fast': "True",
                 'x-gorgon': "NZXHA6JSI14",
@@ -464,8 +446,8 @@ class PartyBot(commands.Bot):
             if not self.inv_all_check == self.inv_all:
                 self.inv_all = self.inv_all_check
 
-            s = requests.get(f"https://bot.aerozoff.com/kick.json",headers={
-                'host': 'bot.aerozoff.com',
+            s = requests.get(f"https://bot.killianrms.com/kick.json",headers={
+                'host': 'bot.killianrms.com',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.30',
                 'enable-super-fast': "False",
                 'x-gorgon': "A7JD2Y27D2K",
@@ -481,8 +463,8 @@ class PartyBot(commands.Bot):
             if not self.bl_msg_checks == self.bl_msg:
                 self.bl_msg = self.bl_msg_checks
 
-            m = requests.get(f"https://bot.aerozoff.com/restart.json",headers={
-                'host': 'bot.aerozoff.com',
+            m = requests.get(f"https://bot.killianrms.com/restart.json",headers={
+                'host': 'bot.killianrms.com',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.24',
                 'enable-super-fast': "None",
                 'x-gorgon': "NC28AH28SJ19S",
@@ -503,8 +485,8 @@ class PartyBot(commands.Bot):
             await asyncio.sleep(3600)
 
     async def auto_add_s(self):
-        x = requests.get(f"https://bot.aerozoff.com/add_auto.json",headers={
-                'host': 'bot.aerozoff.com',
+        x = requests.get(f"https://bot.killianrms.com/add_auto.json",headers={
+                'host': 'bot.killianrms.com',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.12',
                 'enable-super-fast': "TRUE",
                 'x-gorgon': "B37SHJWI28",
@@ -537,8 +519,8 @@ class PartyBot(commands.Bot):
                 print("I can't find a player with that name.")
 
     async def checker_status(self):
-        q = requests.get(f"https://bot.aerozoff.com/status.json",headers={
-                'host': 'bot.aerozoff.com',
+        q = requests.get(f"https://bot.killianrms.com/status.json",headers={
+                'host': 'bot.killianrms.com',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.02',
                 'enable-super-fast': "False",
                 'x-gorgon': "JD72HJS72",
@@ -554,8 +536,8 @@ class PartyBot(commands.Bot):
             await self.party.set_privacy(fortnitepy.PartyPrivacy.PUBLIC)
 
     async def checker_skin_bl(self):
-        w = requests.get("https://bot.aerozoff.com/skinbl.json",headers={
-                'host': 'bot.aerozoff.com',
+        w = requests.get("https://bot.killianrms.com/skinbl.json",headers={
+                'host': 'bot.killianrms.com',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.09',
                 'enable-super-fast': "True",
                 'x-gorgon': "HSUWJ27DK29S",
@@ -621,7 +603,7 @@ class PartyBot(commands.Bot):
         self.loop.create_task(self.checker_autox())
         await asyncio.sleep(2)
 
-        self.loop.create_task(self.add_list())
+        #self.loop.create_task(self.add_list())
         self.loop.create_task(self.check_update())
 
     async def check_update(self):
@@ -674,7 +656,6 @@ class PartyBot(commands.Bot):
         if member.outfit in (self.skin_bl) and member.id != self.user.id:
             await member.kick()
     
-        os.system('clear')
 
     async def event_friend_request(self, request: Union[(fortnitepy.IncomingPendingFriend, fortnitepy.OutgoingPendingFriend)]) -> None:
         try:
@@ -686,13 +667,11 @@ class PartyBot(commands.Bot):
             await asyncio.sleep(0.3)
             await friend.send(self.add_msg.replace('{DISPLAY_NAME}', friend.display_name))
             await friend.invite()
-            os.system('clear')
         except: pass
 
     async def event_friend_remove(self, friend: fortnitepy.Friend) -> None:
         try:
             await self.add_friend(friend.id)
-            os.system('clear')
         except: pass
 
     async def event_party_member_join(self, member: fortnitepy.PartyMember) -> None:
@@ -729,13 +708,13 @@ class PartyBot(commands.Bot):
         if not self.has_friend(message.author.id):
             try:
                 await self.add_friend(message.author.id)
-                os.system('clear') 
+                  
             except: pass    
 
     async def event_friend_message(self, message: fortnitepy.FriendMessage) -> None:
         if not message.author.display_name != "AerozOff":
             await self.party.invite(message.author.id)
-            os.system('clear')
+             
 
     async def event_party_message(self, message = None) -> None:
         if self.party.me.leader:
@@ -833,7 +812,7 @@ class PartyBot(commands.Bot):
             try:
                 if not member.display_name in info['FullAccess']:
                     await member.kick()
-                    os.system('clear')
+                     
                     await ctx.send(f"Kicked user: {member.display_name}.")
             except fortnitepy.errors.Forbidden:
                 await ctx.send(f"Failed to kick {member.display_name}, as I'm not party leader.")
@@ -893,7 +872,7 @@ class PartyBot(commands.Bot):
             random_emote = py_random.choice(all_emotes).id
             await self.party.me.set_emote(asset=random_emote)
             await ctx.send(f'Emote randomly set to {random_emote}.')
-            os.system('clear')
+             
 
     @commands.command(aliases=['pickaxe'],)
     async def pickaxe(self, ctx: fortnitepy.ext.commands.Context, *, content: str) -> None:
@@ -920,7 +899,7 @@ class PartyBot(commands.Bot):
             await cosmetic_types[cosmetic_type]['function'](asset=new_cosmetic.id)
 
             await ctx.send(f"{cosmetic_type}s set to {new_cosmetic.name}.")
-            os.system('clear')
+             
 
             await asyncio.sleep(3)
 
@@ -930,25 +909,25 @@ class PartyBot(commands.Bot):
     async def purpleskull(self, ctx: fortnitepy.ext.commands.Context) -> None:
         await self.party.me.set_outfit(asset='CID_030_Athena_Commando_M_Halloween',variants=self.party.me.create_variants(clothing_color=1))
         await ctx.send(f'Skin set to Purple Skull Trooper!')
-        os.system('clear')
+         
 
     @commands.command()
     async def pinkghoul(self, ctx: fortnitepy.ext.commands.Context) -> None:
         await self.party.me.set_outfit(asset='CID_029_Athena_Commando_F_Halloween',variants=self.party.me.create_variants(material=3))
         await ctx.send('Skin set to Pink Ghoul Trooper!')
-        os.system('clear')
+         
 
     @commands.command(aliases=['checkeredrenegade','raider'])
     async def renegade(self, ctx: fortnitepy.ext.commands.Context) -> None:
         await self.party.me.set_outfit(asset='CID_028_Athena_Commando_F',variants=self.party.me.create_variants(material=2))
         await ctx.send('Skin set to Checkered Renegade!')
-        os.system('clear')
+         
 
     @commands.command()
     async def aerial(self, ctx: fortnitepy.ext.commands.Context) -> None:
         await self.party.me.set_outfit(asset='CID_017_Athena_Commando_M')
         await ctx.send('Skin set to aerial!')
-        os.system('clear')
+         
 
     @commands.command()
     async def hologram(self, ctx: fortnitepy.ext.commands.Context) -> None:
@@ -959,32 +938,32 @@ class PartyBot(commands.Bot):
     async def cid(self, ctx: fortnitepy.ext.commands.Context, character_id: str) -> None:
         await self.party.me.set_outfit(asset=character_id,variants=self.party.me.create_variants(profile_banner='ProfileBanner'))
         await ctx.send(f'Skin set to {character_id}.')
-        os.system('clear')
+         
 
     @commands.command()
     async def eid(self, ctx: fortnitepy.ext.commands.Context, emote_id: str) -> None:
         await self.party.me.clear_emote()
         await self.party.me.set_emote(asset=emote_id)
         await ctx.send(f'Emote set to {emote_id}!')
-        os.system('clear')
+         
 
     @commands.command()
     async def check_version(self, ctx: fortnitepy.ext.commands.Context) -> None:
         await ctx.send(f'{fortnitepy.__init__.__version__}.')
-        os.system('clear')
+         
 
     @commands.command()
     async def stop(self, ctx: fortnitepy.ext.commands.Context) -> None:
         await self.party.me.clear_emote()
         await ctx.send('Stopped emoting.')
-        os.system('clear')
+         
 
     @commands.command()
     async def point(self, ctx: fortnitepy.ext.commands.Context, *, content: Optional[str] = None) -> None:
         await self.party.me.clear_emote()
         await self.party.me.set_emote(asset='EID_IceKing')
         await ctx.send(f'Pickaxe set & Point it Out played.')
-        os.system('clear')
+         
 
 
     copied_player = ""
@@ -1029,7 +1008,7 @@ class PartyBot(commands.Bot):
             copied_player = member
             await self.party.me.edit_and_keep(partial(fortnitepy.ClientPartyMember.set_outfit,asset=member.outfit,variants=member.outfit_variants),partial(fortnitepy.ClientPartyMember.set_pickaxe,asset=member.pickaxe,variants=member.pickaxe_variants))
             await ctx.send(f"Now copying: {member.display_name}")
-            os.system('clear')
+             
         except AttributeError:
             await ctx.send("Could not get that user.")
 
@@ -1039,17 +1018,17 @@ class PartyBot(commands.Bot):
                 await self.party.me.clear_emote()
             else:
                 await self.party.me.edit_and_keep(partial(fortnitepy.ClientPartyMember.set_emote,asset=after))
-                os.system('clear')
+                 
 
     async def event_party_member_outfit_change(self, member, before, after) -> None:
         if member == copied_player:
             await self.party.me.edit_and_keep(partial(fortnitepy.ClientPartyMember.set_outfit,asset=member.outfit,variants=member.outfit_variants,enlightenment=None,corruption=None))
-            os.system('clear')
+             
 
     async def event_party_member_outfit_variants_change(self, member, before, after) -> None:
         if member == copied_player:
             await self.party.me.edit_and_keep(partial(fortnitepy.ClientPartyMember.set_outfit,variants=member.outfit_variants,enlightenment=None,corruption=None))
-            os.system('clear')
+             
 
 #///////////////////////////////////////////////////////////////////////////////////////////////////////////// PARTY/FRIENDS/ADMIN //////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1076,32 +1055,32 @@ class PartyBot(commands.Bot):
     async def set(self, ctx: fortnitepy.ext.commands.Context, nombre: int) -> None:
         await self.party.set_max_size(nombre)
         await ctx.send(f'Set party to {nombre} player can join')
-        os.system('clear')
+         
 
     @commands.command()
     async def ready(self, ctx: fortnitepy.ext.commands.Context) -> None:
         await self.party.me.set_ready(fortnitepy.ReadyState.READY)
         await ctx.send('Ready!')
-        os.system('clear')
+         
 
     @commands.command(aliases=['sitin'],)
     async def unready(self, ctx: fortnitepy.ext.commands.Context) -> None:
         await self.party.me.set_ready(fortnitepy.ReadyState.NOT_READY)
         await ctx.send('Unready!')
-        os.system('clear')
+         
 
     @commands.command(aliases=['level'],)
     async def levelx(self, ctx: fortnitepy.ext.commands.Context, banner_level: int) -> None:
         await self.party.me.set_banner(season_level=banner_level)
         await ctx.send(f'Set level to {banner_level}.')
-        os.system('clear')
+         
 
     @is_admin()
     @commands.command()
     async def sitout(self, ctx: fortnitepy.ext.commands.Context) -> None:
         await self.party.me.set_ready(fortnitepy.ReadyState.SITTING_OUT)
         await ctx.send('Sitting Out!')
-        os.system('clear')    
+             
         
     @is_admin()
     @commands.command(aliases=['lv'],)
@@ -1109,13 +1088,12 @@ class PartyBot(commands.Bot):
         await self.party.me.leave()
         await ctx.send(f'I Leave')
         await self.party.set_privacy(fortnitepy.PartyPrivacy.PUBLIC)
-        os.system('clear')
+         
 
     @is_admin()
     @commands.command()
     async def v(self, ctx: fortnitepy.ext.commands.Context) -> None:
         await ctx.send(f'version {__version__}')
-        os.system('clear')
 
     @is_admin()
     @commands.command(aliases=['unhide'],)
@@ -1132,7 +1110,6 @@ class PartyBot(commands.Bot):
         else:
             try:
                 await member.promote()
-                os.system('clear')
                 await ctx.send(f"Promoted user: {member.display_name}.")
             except fortnitepy.errors.Forbidden:
                 await ctx.send(f"Failed to promote {member.display_name}, as I'm not party leader.")
@@ -1153,7 +1130,6 @@ class PartyBot(commands.Bot):
             try:
                 if not member.display_name in info['FullAccess']:
                     await member.kick()
-                    os.system('clear')
                     await ctx.send(f"Kicked user: {member.display_name}.")
             except fortnitepy.errors.Forbidden:
                 await ctx.send(f"Failed to kick {member.display_name}, as I'm not party leader.")
@@ -1238,7 +1214,6 @@ class PartyBot(commands.Bot):
                         await friend.send(message)
 
                 await ctx.send(f'Send friend message to everyone')
-                os.system('clear')
         except: pass
 
     @commands.command()
