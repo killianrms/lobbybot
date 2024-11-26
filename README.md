@@ -2,6 +2,12 @@
 
 Bienvenue sur le dépôt GitHub d'**AerozBot**, une bibliothèque Python permettant de créer des bots sur le jeu Fortnite. Ces bots peuvent simuler des lobbys avec tous les skins et danses disponibles dans le jeu, et fournir un aperçu des nouveautés avant leur sortie officielle.
 
+## Mon apprentissage critique 
+
+Ceci était mon premier projet en équipe ( pendant le premier confinement ) j'ai donc du apprendre à utiliser l'outil github et la communication au sein d'une équipe !
+
+Ce projet m'a finalement apporté beaucoup de bonne chose comme le savoir faire en équipe, ou encore de l'argent car c'était mon premier projet rémunéré également.
+
 ## Ressources clés
 
 - **Site web officiel** : [bot.killianrms.com](https://bot.killianrms.com)
