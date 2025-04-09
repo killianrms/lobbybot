@@ -1,6 +1,6 @@
-# AerozBot
+# Lobbybot
 
-Bienvenue sur le dépôt GitHub d'**AerozBot**, une bibliothèque Python permettant de créer des bots sur le jeu Fortnite. Ces bots peuvent simuler des lobbys avec tous les skins et danses disponibles dans le jeu, et fournir un aperçu des nouveautés avant leur sortie officielle.
+Bienvenue sur le dépôt GitHub **Lobbybot**, une bibliothèque Python permettant de créer des bots sur le jeu Fortnite. Ces bots peuvent simuler des lobbys avec tous les skins et danses disponibles dans le jeu, et fournir un aperçu des nouveautés avant leur sortie officielle.
 
 ## Mon apprentissage critique 
 
@@ -16,7 +16,7 @@ Ce projet m'a finalement apporté beaucoup de bonne chose comme le savoir faire 
 
 ## Description
 
-AerozBot est conçu pour :
+Lobbybot est conçu pour :
 
 - Permettre de visualiser tous les skins, danses et autres éléments disponibles dans Fortnite.
 - Offrir des commandes pour découvrir les nouveautés du jeu avant leur sortie officielle.
@@ -31,7 +31,7 @@ AerozBot est conçu pour :
 
 ## Installation
 
-Pour utiliser AerozBot ou la bibliothèque `schbot`, suivez les étapes suivantes :
+Pour utiliser Lobbybot ou la bibliothèque `schbot`, suivez les étapes suivantes :
 
 1. Installez la bibliothèque à partir de PyPI :
    ```bash
@@ -47,7 +47,7 @@ Pour utiliser AerozBot ou la bibliothèque `schbot`, suivez les étapes suivante
 
 ## Contribution
 
-Les contributions sont les bienvenues pour améliorer AerozBot et la bibliothèque associée. Si vous souhaitez contribuer :
+Les contributions sont les bienvenues pour améliorer Lobbybot et la bibliothèque associée. Si vous souhaitez contribuer :
 
 1. **Forkez le dépôt**
 2. **Créez une branche** pour vos modifications :
@@ -58,7 +58,7 @@ Les contributions sont les bienvenues pour améliorer AerozBot et la bibliothèq
 
 ## Remerciements
 
-Merci à tous les utilisateurs et contributeurs qui font d'AerozBot une solution de référence pour les bots Fortnite. Si vous avez des questions ou suggestions, n'hésitez pas à rejoindre notre serveur Discord : [discord.gg/lobbybot](https://discord.gg/lobbybot).
+Merci à tous les utilisateurs et contributeurs qui font des Lobbybots une solution de référence pour les bots Fortnite. Si vous avez des questions ou suggestions, n'hésitez pas à rejoindre notre serveur Discord : [discord.gg/lobbybot](https://discord.gg/lobbybot).
 
 ---
 
