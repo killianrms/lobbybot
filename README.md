@@ -12,7 +12,7 @@ Ce projet m'a finalement apporté beaucoup de bonne chose comme le savoir faire 
 
 - **Site web officiel** : [bot.killianrms.com](https://bot.killianrms.com)
 - **Bibliothèque PyPI** : [schbot sur PyPI](https://pypi.org/project/schbot/)
-- **Support communautaire** : Rejoignez-nous sur Discord pour toute question ou assistance : [discord.gg/lobbybot](https://discord.gg/lobbybot)
+- **Support communautaire** : Rejoignez-nous sur Discord pour toute question ou assistance : [discord.gg/WRWcnmzBvy](https://discord.gg/WRWcnmzBvy)
 
 ## Description
 
@@ -63,3 +63,4 @@ Merci à tous les utilisateurs et contributeurs qui font des Lobbybots une solut
 ---
 
 Pour toute information supplémentaire, visitez le site [bot.killianrms.com](https://bot.killianrms.com) ou consultez la documentation sur PyPI : [schbot](https://pypi.org/project/schbot/).
+
